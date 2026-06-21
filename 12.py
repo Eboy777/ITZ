@@ -27,6 +27,7 @@ for i in range(2, len(df_rates)):
             "Недогруз (ч)": deficiency
         })
 
-# Создаём DataFrame и выводим таблицу
+# Создаём DataFrame и сохраняем в Excel
 df_results = pd.DataFrame(results)
-print(df_results.to_string(index=False))
+df_results.to_excel("результат_недогруз.xlsx", index=False)
+print("Результат сохранён в файл: результат_недогруз.xlsx")
